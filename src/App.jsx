@@ -1,26 +1,29 @@
-import { useState } from 'react';
-import './App.css';
+import { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import CharacterSelect from "./components/CharacterSelect";
+import GameBoard from "./components/GameBoard";
+import FullImageView from "./components/FullImageView";
+import "./App.css";
+import "./components/GameBoard.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [selectedCharacter, setSelectedCharacter] = useState("");
+
+  const handleCharacterSelect = (event) => {
+    setSelectedCharacter(event.target.value);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src="/react.svg" className="logo react" alt="React logo" />
-        </a>
+    <Router> {/* ✅ BrowserRouter wraps everything */}
+      <div className="app">
+        <h1>Vite + React</h1>
+        <CharacterSelect onSelect={handleCharacterSelect} />
+        <Routes>
+          <Route path="/" element={<GameBoard />} />
+          <Route path="/full-image/:imageName" element={<FullImageView />} />
+        </Routes>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount(count + 1)}>
-          count is {count}
-        </button>
-      </div>
-    </>
+    </Router>
   );
 }
 

@@ -1,0 +1,31 @@
+.game-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.game-thumbnail {
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.game-thumbnail:hover {
+    transform: scale(1.1);
+}
+
+.full-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.target-box {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
