@@ -3,6 +3,7 @@ import GameBoard from "./components/GameBoard";
 import FullImageView from "./components/FullImageView";
 import "./App.css";
 import "./components/GameBoard.css";
+import "./components/MyComponent.css";
 
 function App() {
   return (
