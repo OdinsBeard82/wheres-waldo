@@ -1,14 +1,16 @@
+// src/components/FullImageView.jsx
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import CharacterSelect from "./CharacterSelect";
 import gameImage from "../assets/image_walle.jpg";
 import gameImage2 from "../assets/where-is-sci-fi.jpg";
 import gameImage3 from "../assets/game-image-easy.jpg";
+import characterOptions from "../data/characterOptions";
 
 const images = {
     "image_walle": gameImage,
     "where-is-sci-fi": gameImage2,
-    "game-image-easy": gameImage3,
+    "game-image-easy": gameImage3
 };
 
 function FullImageView() {
@@ -37,7 +39,10 @@ function FullImageView() {
         <div className="full-image-container">
             <button onClick={() => navigate(-1)} className="back-button">Go Back</button>
             <img src={imageSrc} alt="Full Game" className="full-image" />
-            <CharacterSelect onSelect={handleCharacterSelect} />
+            <CharacterSelect
+                options={characterOptions[imageName] || []}
+                onSelect={handleCharacterSelect}
+            />
             {selectedCharacter && <p>You selected: {selectedCharacter}</p>}
         </div>
     );
