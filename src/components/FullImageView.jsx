@@ -19,12 +19,12 @@ const images = {
     "game-image-easy": gameImage3
 };
 
-// Character positions (adjust as needed)
+// Corrected character positions
 const characterCutouts = {
     "image_walle": [
-        { name: "Walle", src: Walle, x: "30%", y: "50%" },
-        { name: "MatrixBot", src: MatrixBot, x: "60%", y: "30%" },
-        { name: "NannyBot", src: NannyBot, x: "80%", y: "70%" }
+        { name: "MatrixBot", src: MatrixBot, x: "16.5%", y: "45%" },
+        { name: "Walle", src: Walle, x: "31.5%", y: "46%" },
+        { name: "NannyBot", src: NannyBot, x: "77%", y: "56.5%" }
     ],
     "where-is-sci-fi": [],
     "game-image-easy": []
@@ -98,7 +98,7 @@ function FullImageView() {
                             top: char.y,
                             left: char.x,
                             transform: "translate(-50%, -50%)",
-                            width: "5%", // Adjust size as needed
+                            width: "5.5%", // Adjust size as needed
                             cursor: "pointer",
                             zIndex: 10
                         }}
