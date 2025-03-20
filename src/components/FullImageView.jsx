@@ -32,7 +32,7 @@ const characterCutouts = {
         { name: "NannyBot", src: NannyBot, x: "80.77%", y: "57.28%", width: "5%" }
     ],
     "where-is-sci-fi": [
-        { name: "Eye", src: Eye, x: "13.76%", y: "37.94%", width: "5%" },
+        { name: "Eye", src: Eye, x: "75%", y: "10%", width: "5%" },
         { name: "Face", src: Face, x: "8%", y: "92%", width: "5%" },
         { name: "Laser", src: Laser, x: "42.5%", y: "82.5%", width: "5%" }
     ],
