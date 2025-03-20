@@ -5,10 +5,15 @@ import gameImage from "../assets/image_walle.jpg";
 import gameImage2 from "../assets/where-is-sci-fi.jpg";
 import gameImage3 from "../assets/game-image-easy.jpg";
 
-// Character images
+// Character images for Wall-E
 import Walle from "../assets/image_walle/Walle.png";
 import MatrixBot from "../assets/image_walle/MatrixBot.png";
 import NannyBot from "../assets/image_walle/NannyBot.png";
+
+// Character images for Sci-fi
+import Eye from "../assets/where-is-sci-fi/eye.png";
+import Face from "../assets/where-is-sci-fi/face.png";
+import Laser from "../assets/where-is-sci-fi/laser.png";
 
 import characterOptions from "../data/characterOptions";
 import characterTargetAreas from "../data/characterTargetAreas";
@@ -19,14 +24,18 @@ const images = {
     "game-image-easy": gameImage3
 };
 
-// Corrected character positions
+// Corrected character positions 
 const characterCutouts = {
     "image_walle": [
         { name: "MatrixBot", src: MatrixBot, x: "13.76%", y: "37.94%", width: "5%" },
         { name: "Walle", src: Walle, x: "30.18%", y: "44.89%", width: "5%" },
         { name: "NannyBot", src: NannyBot, x: "80.77%", y: "57.28%", width: "5%" }
     ],
-    "where-is-sci-fi": [],
+    "where-is-sci-fi": [
+        { name: "Eye", src: Eye, x: "13.76%", y: "37.94%", width: "5%" },
+        { name: "Face", src: Face, x: "8%", y: "92%", width: "5%" },
+        { name: "Laser", src: Laser, x: "42.5%", y: "82.5%", width: "5%" }
+    ],
     "game-image-easy": []
 };
 
