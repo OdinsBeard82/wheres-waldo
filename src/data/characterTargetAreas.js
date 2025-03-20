@@ -2,7 +2,7 @@ const characterTargetAreas = {
     "image_walle": {
         Walle: { xMin: 40, xMax: 60, yMin: 40, yMax: 60 },
         NannyBot: { xMin: 20, xMax: 30, yMin: 50, yMax: 60 },
-        MatrixBot: { xMin: 70, xMax: 80, yMin: 20, yMax: 30 }
+        MatrixBot: { xMin: 14, xMax: 15, yMin: 39, yMax: 40 }
     },
     "where-is-sci-fi": {
         Eye: { xMin: 10, xMax: 20, yMin: 10, yMax: 20 },

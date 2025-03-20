@@ -1,29 +1,31 @@
-/* Container for the game board */
+/* Game board container */
 .game-board {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    padding: 20px;
 }
 
-/* Styling for each game thumbnail */
+/* Game thumbnail styling */
 .game-thumbnail {
     border-radius: 10px;
-    transition: transform 0.2s ease-in-out;
     cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Hover effect for game thumbnails */
 .game-thumbnail:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Styling for the full-size image */
+/* Full-size image styling */
 .full-image {
     max-width: 100%;
     max-height: 100%;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
 /* Back button styling */
@@ -31,46 +33,65 @@
     position: absolute;
     top: 20px;
     left: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
     color: #fff;
+    background-color: #007bff;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Hover effect for the back button */
 .back-button:hover {
     background-color: #0056b3;
+    transform: scale(1.05);
 }
 
-/* Container for the character selection dropdown */
+/* Character selection dropdown container */
 .character-select-container {
-    position: absolute;
+    position: fixed;
     bottom: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 12px;
     border-radius: 8px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 10;
 }
 
-/* Styling for the character selection dropdown */
+/* Character selection dropdown styling */
 .character-select {
-    padding: 5px;
+    padding: 6px;
     font-size: 16px;
+    border: 1px solid #aaa;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s ease-in-out;
 }
 
+.character-select:hover,
+.character-select:focus {
+    border-color: #007bff;
+}
+
+/* Click coordinates display */
 .click-coordinates {
-    color: white;
-    font-weight: bold;
     position: relative;
     margin-top: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 6px;
     text-align: center;
     display: inline-block;
 }
