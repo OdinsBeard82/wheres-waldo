@@ -22,9 +22,9 @@ const images = {
 // Corrected character positions
 const characterCutouts = {
     "image_walle": [
-        { name: "MatrixBot", src: MatrixBot, x: "16.5%", y: "45%" },
-        { name: "Walle", src: Walle, x: "31.5%", y: "46%" },
-        { name: "NannyBot", src: NannyBot, x: "77%", y: "56.5%" }
+        { name: "MatrixBot", src: MatrixBot, x: "13.76%", y: "37.94%", width: "5%" },
+        { name: "Walle", src: Walle, x: "30.18%", y: "44.89%", width: "5%" },
+        { name: "NannyBot", src: NannyBot, x: "80.77%", y: "57.28%", width: "5%" }
     ],
     "where-is-sci-fi": [],
     "game-image-easy": []
@@ -78,12 +78,13 @@ function FullImageView() {
             <button onClick={() => navigate(-1)} className="back-button">Go Back</button>
 
             {/* Game Image Container */}
-            <div className="image-container">
+            <div className="image-container" style={{ position: "relative" }}>
                 <img
                     src={imageSrc}
                     alt="Game Scene"
                     className="full-image"
                     onClick={handleImageClick}
+                    style={{ width: "100%", height: "auto" }}
                 />
 
                 {/* Render Character Images on Top */}
@@ -98,7 +99,9 @@ function FullImageView() {
                             top: char.y,
                             left: char.x,
                             transform: "translate(-50%, -50%)",
-                            width: "5.5%", // Adjust size as needed
+                            width: char.width,
+                            maxWidth: "5%", // Maintain relative size
+                            height: "auto", // Maintain aspect ratio
                             cursor: "pointer",
                             zIndex: 10
                         }}
