@@ -11,9 +11,15 @@ import MatrixBot from "../assets/image_walle/MatrixBot.png";
 import NannyBot from "../assets/image_walle/NannyBot.png";
 
 // Character images for Sci-fi
-import Eye from "../assets/where-is-sci-fi/eye.png";
-import Face from "../assets/where-is-sci-fi/face.png";
-import Laser from "../assets/where-is-sci-fi/laser.png";
+import Eye from "../assets/where-is-sci-fi/Eye.png";
+import Face from "../assets/where-is-sci-fi/Face.png";
+import Laser from "../assets/where-is-sci-fi/Laser.png";
+
+// Character images for Goku
+import Goku from "../assets/game-image-easy/Goku.png";
+import Vegeta from "../assets/game-image-easy/Vegeta.png";
+import Super from "../assets/game-image-easy/Super.png";
+
 
 import characterOptions from "../data/characterOptions";
 import characterTargetAreas from "../data/characterTargetAreas";
@@ -36,7 +42,11 @@ const characterCutouts = {
         { name: "Face", src: Face, x: "8%", y: "92%", width: "5%" },
         { name: "Laser", src: Laser, x: "42.5%", y: "82.5%", width: "5%" }
     ],
-    "game-image-easy": []
+    "game-image-easy": [
+        { name: "Goku", src: Goku, x: "23.5%", y: "53%", width: "19%" },
+        { name: "Vegeta", src: Vegeta, x: "69%", y: "52%", width: "10%" },
+        { name: "Super", src: Super, x: "62.3%", y: "61.5%", width: "16%" },
+    ]
 };
 
 function FullImageView() {
@@ -108,14 +118,14 @@ function FullImageView() {
                             top: char.y,
                             left: char.x,
                             transform: "translate(-50%, -50%)",
-                            width: char.width,
-                            maxWidth: "5%", // Maintain relative size
+                            width: char.width, // This will now be fully respected
                             height: "auto", // Maintain aspect ratio
                             cursor: "pointer",
                             zIndex: 10
                         }}
                         onClick={() => setSelectedCharacter(char.name)}
                     />
+
                 ))}
             </div>
 
